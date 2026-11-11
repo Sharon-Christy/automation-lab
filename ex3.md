@@ -1,647 +1,570 @@
+EXPERIMENT – AGILE PROJECT MANAGEMENT USING GITHUB FOR SERVER MONITORING APPLICATION
+AIM
 
-# EXPERIMENT 3 – AGILE PROJECT MANAGEMENT WITH GIT
+To implement Agile project management using GitHub Projects by creating a project board for a Server Monitoring Application, developing user stories for CPU, Memory, Disk, and Overall Server Health Monitoring, creating GitHub Issues, organizing tasks into Backlog, To Do, In Progress, and Done, and linking Git commits with GitHub Issues.
 
-## AIM
+SOFTWARE REQUIREMENTS
+Ubuntu Linux
+Git
+GitHub Account
+GitHub Repository
+GitHub Projects
+PROJECT DESCRIPTION
 
-To implement Agile project management using GitHub Projects, create user stories and issues, track task progress, map scheduled jobs to Agile tasks, and link Git commits with GitHub Issues.
+A software company is developing a Server Monitoring Application to monitor server resources and identify performance problems.
 
-## SOFTWARE REQUIREMENTS
+The application includes:
 
-- Ubuntu Linux
-- Git
-- GitHub Account
-- GitHub Projects
-
-## IMPORTANT
+CPU Monitoring – Monitor CPU utilization and identify high CPU usage.
+Memory Monitoring – Monitor RAM utilization and identify memory shortages.
+Disk Monitoring – Monitor disk space and identify low storage availability.
+Overall Server Health – Display the overall health status of the server.
+IMPORTANT
 
 This experiment is completely independent.
 
 Create:
-- A NEW GitHub repository
-- A NEW GitHub Project Board
-- NEW GitHub Issues
-- A NEW local project folder
+
+A NEW GitHub repository.
+A NEW GitHub Project Board.
+NEW GitHub Issues.
+A NEW local project folder.
 
 Do not use any previous experiment's repository or files.
 
----
-
-# PART 1 – CREATE A NEW GITHUB REPOSITORY
-
-## STEP 1: Open GitHub
-
-1. Open https://github.com
-2. Log in to your GitHub account.
-3. Click the + icon at the top.
-4. Select New repository.
-
-## STEP 2: Create Repository
+PART 1 – CREATE A NEW GITHUB REPOSITORY
+STEP 1 – Open GitHub
+Open https://github.com
+Log in to your GitHub account.
+Click the + icon at the top-right corner.
+Select New repository.
+STEP 2 – Create Repository
 
 Enter:
 
 Repository name:
 
-`agile-project-lab`
+server-monitoring-agile
 
 Description:
 
-`Agile project management using Git and GitHub Projects`
+Agile project management for CPU, Memory, Disk and Server Health Monitoring Application
 
 Visibility: Public
 
-Select **Add a README file**.
+Select Add a README file.
 
-Click **Create repository**.
+Click Create repository.
 
-Your NEW repository URL will be:
+Your repository URL will be:
 
-https://github.com/Sharon-Christy/agile-project-lab
+https://github.com/YOUR_USERNAME/server-monitoring-agile
 
----
+Replace YOUR_USERNAME with your actual GitHub username.
 
-# PART 2 – CREATE A NEW AGILE PROJECT BOARD
+PART 2 – CREATE A NEW AGILE PROJECT BOARD
+STEP 3 – Create GitHub Project
+Open your GitHub account.
+Click your profile picture.
+Select Your projects.
+Click New project.
+Select Board.
+Enter the project name:
 
-## STEP 3: Create GitHub Project
+Server Monitoring Agile Project Board
 
-1. Click your GitHub profile picture.
-2. Select Your projects.
-3. Click New project.
-4. Select Board.
-5. Enter the name:
+Click Create project.
+STEP 4 – Configure Status Columns
 
-`Agile Software Development Management`
+Configure the following four statuses:
 
-6. Click Create project.
+Backlog
+To Do
+In Progress
+Done
 
-## STEP 4: Configure Status Columns
+If the required statuses are unavailable:
 
-Configure these statuses:
+Open the Status field dropdown.
+Select Edit field.
+Add the missing status options.
+Save the changes.
 
-1. Backlog
-2. To Do
-3. In Progress
-4. Done
+Your board must contain four columns:
 
-If Backlog is missing:
-
-1. Open the Status field menu.
-2. Select Edit field.
-3. Add Backlog.
-4. Save changes.
-
----
-
-# PART 3 – CREATE NEW AGILE ISSUES
-
-## STEP 5: Open the New Repository
+Backlog	To Do	In Progress	Done
+Future Tasks	Ready Tasks	Active Tasks	Completed Tasks
+PART 3 – CREATE USER STORIES AND GITHUB ISSUES
+STEP 5 – Open the Repository
 
 Open:
 
-https://github.com/Sharon-Christy/agile-project-lab
+https://github.com/YOUR_USERNAME/server-monitoring-agile
 
-Select Issues.
+Click Issues.
+Click New issue.
 
 If Issues is unavailable, open repository Settings and enable Issues under Features.
 
-## STEP 6: Create Issue 1
+Create the following 10 Issues.
 
-Click New issue.
-
-Title:
-
-`Develop Daily Report Generator`
-
-Description:
-
-```text
-User Story:
-
-As a project manager,
-I want to generate daily progress reports,
-so that I can monitor team activities.
-
-Tasks:
-1. Create a Bash script.
-2. Generate a daily report.
-3. Save the report in a log file.
-4. Verify execution.
-```
-
-Click Create issue.
-
-Remember the actual Issue number displayed by GitHub.
-
-## STEP 7: Create Issue 2
-
-Click New issue.
+STEP 6 – CREATE ISSUE 1: CPU MONITORING
 
 Title:
 
-`Implement Scheduled Report Execution`
+Implement CPU Usage Monitoring
 
 Description:
 
-```text
-User Story:
+text
+USER STORY:
 
-As a developer,
-I want the report script to run automatically,
-so that manual execution is not required.
+As a system administrator,
+I want to monitor CPU utilization,
+so that I can identify high CPU usage and prevent server performance problems.
 
-Tasks:
-1. Configure Cron.
-2. Schedule daily execution.
-3. Verify scheduled execution.
-4. Check generated reports.
-```
+TASKS:
+
+1. Collect CPU utilization information.
+2. Identify CPU usage percentage.
+3. Display CPU usage.
+4. Identify high CPU utilization.
+5. Verify CPU monitoring functionality.
+
+ACCEPTANCE CRITERIA:
+
+1. CPU utilization must be displayed as a percentage.
+2. High CPU usage must be identifiable.
+3. CPU information must be available to administrators.
+
+MODULE: CPU MONITORING
+PRIORITY: HIGH
+
 
 Click Create issue.
 
-## STEP 8: Create Issue 3
-
-Click New issue.
+STEP 7 – CREATE ISSUE 2: CPU ALERT SYSTEM
 
 Title:
 
-`Maintain Project Version History`
+Develop CPU Usage Alert System
 
 Description:
 
-```text
-User Story:
+text
+USER STORY:
 
-As a developer,
-I want to track project changes using Git,
-so that the development history is maintained.
+As a system administrator,
+I want to receive alerts when CPU utilization becomes too high,
+so that I can take action before server performance is affected.
 
-Tasks:
-1. Track source files.
-2. Commit project changes.
-3. Push changes to GitHub.
-4. Link commits with issues.
-```
+TASKS:
+
+1. Define a CPU usage threshold.
+2. Compare current CPU usage with the threshold.
+3. Identify excessive CPU utilization.
+4. Generate alerts when the threshold is exceeded.
+5. Test CPU alert functionality.
+
+ACCEPTANCE CRITERIA:
+
+1. CPU threshold must be configurable.
+2. An alert must be generated when CPU usage exceeds the threshold.
+3. Normal CPU usage must not generate unnecessary alerts.
+
+MODULE: CPU MONITORING
+PRIORITY: HIGH
+
 
 Click Create issue.
 
----
+STEP 8 – CREATE ISSUE 3: MEMORY MONITORING
 
-# PART 4 – CONNECT ISSUES TO PROJECT BOARD
+Title:
 
-## STEP 9: Add Issues
+Implement Memory Usage Monitoring
 
-1. Open Issue 1.
-2. Find Projects on the right.
-3. Select Agile Software Development Management.
-4. Repeat for Issue 2 and Issue 3.
+Description:
 
-Alternatively, open the Project Board and use Add item to find the repository Issues.
+text
+USER STORY:
 
-Verify that all three Issues appear.
+As a system administrator,
+I want to monitor RAM utilization,
+so that I can identify memory shortages and prevent server crashes.
 
-## STEP 10: Update Agile Status
+TASKS:
 
-Use these statuses:
+1. Collect memory utilization information.
+2. Identify total RAM capacity.
+3. Identify used memory.
+4. Calculate available memory.
+5. Display memory utilization percentage.
+6. Verify memory monitoring functionality.
 
-| Task | Status |
-|---|---|
-| Develop Daily Report Generator | In Progress |
-| Implement Scheduled Report Execution | To Do |
-| Maintain Project Version History | Backlog |
+ACCEPTANCE CRITERIA:
 
-After completing a task, move it to Done.
+1. Total memory must be displayed.
+2. Used memory must be displayed.
+3. Available memory must be displayed.
+4. Memory utilization must be displayed as a percentage.
 
----
+MODULE: MEMORY MONITORING
+PRIORITY: HIGH
 
-# PART 5 – CREATE NEW PROJECT IN UBUNTU
 
-## STEP 11: Open Ubuntu Terminal
+Click Create issue.
 
-Go to home directory:
+STEP 9 – CREATE ISSUE 4: MEMORY ALERT SYSTEM
 
-```bash
-cd ~
-```
+Title:
 
-Clone the NEW repository:
+Develop Memory Usage Alert System
 
-```bash
-git clone https://github.com/Sharon-Christy/agile-project-lab.git
-```
+Description:
 
-Enter the folder:
+text
+USER STORY:
 
-```bash
-cd agile-project-lab
-```
+As a system administrator,
+I want to receive alerts when memory utilization becomes too high,
+so that I can prevent memory-related server problems.
 
-Verify:
+TASKS:
 
-```bash
-git status
-```
+1. Define a memory usage threshold.
+2. Compare current memory usage with the threshold.
+3. Identify memory shortages.
+4. Generate alerts when memory usage exceeds the threshold.
+5. Test memory alert functionality.
 
-## STEP 12: Configure Git Identity
+ACCEPTANCE CRITERIA:
 
-Only if Git identity is not already configured:
+1. Memory threshold must be configurable.
+2. Alerts must be generated when memory usage exceeds the threshold.
+3. Insufficient available memory must be identifiable.
 
-```bash
-git config --global user.name "Sharon Christy R"
-git config --global user.email "YOUR_GITHUB_EMAIL"
-```
+MODULE: MEMORY MONITORING
+PRIORITY: HIGH
 
-Replace YOUR_GITHUB_EMAIL with your GitHub email.
 
-## STEP 13: Create Daily Report Script
+Click Create issue.
 
-```bash
-nano daily_report.sh
-```
+STEP 10 – CREATE ISSUE 5: DISK MONITORING
 
-Paste:
+Title:
 
-```bash
-#!/bin/bash
+Implement Disk Space Monitoring
 
-echo "AGILE PROJECT DAILY REPORT"
-echo "--------------------------"
-echo "Project: Agile Software Development"
-echo "Task: Daily Report Generation"
-echo "Status: Completed"
-echo "Date: $(date)"
-```
+Description:
 
-Save:
+text
+USER STORY:
 
-1. Ctrl + O
-2. Enter
-3. Ctrl + X
+As a system administrator,
+I want to monitor disk space utilization,
+so that I can identify storage problems before the disk becomes full.
 
-## STEP 14: Give Execution Permission
+TASKS:
 
-```bash
-chmod +x daily_report.sh
-```
+1. Collect disk utilization information.
+2. Identify total disk capacity.
+3. Identify used disk space.
+4. Calculate available disk space.
+5. Display disk usage percentage.
+6. Verify disk monitoring functionality.
 
-## STEP 15: Execute Script
+ACCEPTANCE CRITERIA:
 
-```bash
-./daily_report.sh
-```
+1. Total disk space must be displayed.
+2. Used disk space must be displayed.
+3. Available disk space must be displayed.
+4. Disk utilization must be displayed as a percentage.
 
-Expected output:
+MODULE: DISK MONITORING
+PRIORITY: HIGH
 
-```text
-AGILE PROJECT DAILY REPORT
---------------------------
-Project: Agile Software Development
-Task: Daily Report Generation
-Status: Completed
-Date: [current date and time]
-```
 
-## STEP 16: Generate Report Log
+Click Create issue.
 
-```bash
-./daily_report.sh >> report.log
-```
+STEP 11 – CREATE ISSUE 6: DISK ALERT SYSTEM
 
-Verify:
+Title:
 
-```bash
-cat report.log
-```
+Develop Disk Space Alert System
 
----
+Description:
+give full instruction to paste in .md file in gitube
+text
+USER STORY:
 
-# PART 6 – MAP SCHEDULED JOBS TO AGILE ISSUES
+As a system administrator,
+I want to receive alerts when disk space becomes low,
+so that I can prevent storage-related server failures.
 
-## STEP 17: Create Cron Schedule
+TASKS:
 
-Open Cron editor:
+1. Define a disk usage threshold.
+2. Compare current disk usage with the threshold.
+3. Identify low disk space.
+4. Generate alerts when disk usage exceeds the threshold.
+5. Test disk alert functionality.
 
-```bash
-crontab -e
-```
+ACCEPTANCE CRITERIA:
 
-Choose Nano if asked.
+1. Disk threshold must be configurable.
+2. Alerts must be generated when disk usage exceeds the threshold.
+3. Insufficient available storage must be identifiable.
 
-Add this line:
+MODULE: DISK MONITORING
+PRIORITY: HIGH
 
-```cron
-* * * * * /bin/bash /home/$USER/agile-project-lab/daily_report.sh >> /home/$USER/agile-project-lab/report.log 2>&1
-```
 
-IMPORTANT: Cron does not reliably expand $USER in paths.
+Click Create issue.
 
-Therefore, replace the line above with your actual Ubuntu username. For example:
+STEP 12 – CREATE ISSUE 7: OVERALL SERVER HEALTH DASHBOARD
 
-```cron
-* * * * * /bin/bash /home/sharon_christy_r/agile-project-lab/daily_report.sh >> /home/sharon_christy_r/agile-project-lab/report.log 2>&1
-```
+Title:
 
-Save and exit.
+Develop Overall Server Health Dashboard
 
-Check:
+Description:
 
-```bash
-crontab -l
-```
+text
+USER STORY:
 
-Wait approximately one minute.
+As a system administrator,
+I want to view the overall server health status,
+so that I can quickly identify server resource problems.
 
-Check:
+TASKS:
 
-```bash
-cat report.log
-```
+1. Collect CPU monitoring information.
+2. Collect memory monitoring information.
+3. Collect disk monitoring information.
+4. Combine CPU, memory and disk information.
+5. Display overall server health status.
+6. Identify healthy and unhealthy server conditions.
+7. Test the overall health dashboard.
 
-The report should contain new execution entries if Cron is running.
+ACCEPTANCE CRITERIA:
 
-If necessary:
+1. CPU usage must be displayed.
+2. Memory usage must be displayed.
+3. Disk usage must be displayed.
+4. Overall server health must be displayed.
+5. Resource-related problems must be identifiable.
 
-```bash
-sudo systemctl start cron
-```
+MODULE: SERVER HEALTH DASHBOARD
+PRIORITY: HIGH
 
-## STEP 18: Map Jobs to Issues
 
-| Scheduled Activity | Agile Issue |
-|---|---|
-| Generate daily report | Develop Daily Report Generator |
-| Schedule report with Cron | Implement Scheduled Report Execution |
-| Track project changes | Maintain Project Version History |
+Click Create issue.
 
-Update the corresponding Issue status manually after verifying the activity.
+STEP 13 – CREATE ISSUE 8: RESOURCE USAGE REPORTS
 
----
+Title:
 
-# PART 7 – LINK GIT COMMITS WITH AGILE ISSUES
+Generate Server Resource Usage Reports
 
-## STEP 19: Check Git Status
+Description:
 
-```bash
-git status
-```
+text
+USER STORY:
 
-## STEP 20: Stage Project Files
+As a system administrator,
+I want to generate server resource usage reports,
+so that I can analyze CPU, memory and disk utilization.
 
-```bash
-git add daily_report.sh report.log
-```
+TASKS:
 
-## STEP 21: Commit with Issue Reference
+1. Collect CPU usage information.
+2. Collect memory usage information.
+3. Collect disk usage information.
+4. Generate resource utilization reports.
+5. Display report information.
+6. Verify report generation.
 
-Use the actual Issue number for "Develop Daily Report Generator".
+ACCEPTANCE CRITERIA:
 
-If the Issue number is 1:
+1. Reports must include CPU utilization.
+2. Reports must include memory utilization.
+3. Reports must include disk utilization.
+4. Reports must provide readable resource information.
 
-```bash
-git commit -m "Implement daily report generator refs #1"
-```
+MODULE: REPORTING
+PRIORITY: MEDIUM
 
-The `refs #1` text links the commit to Issue #1 without automatically closing it.
 
-## STEP 22: Push to GitHub
+Click Create issue.
 
-```bash
-git push origin main
-```
+STEP 14 – CREATE ISSUE 9: RESOURCE THRESHOLD CONFIGURATION
 
-For HTTPS authentication, use an authorized GitHub Personal Access Token or browser-based login, not your normal GitHub password.
+Title:
 
-## STEP 23: Verify Commit History
+Configure CPU Memory and Disk Thresholds
 
-```bash
-git log --oneline
-```
+Description:
 
-Open the GitHub repository.
+text
+USER STORY:
 
-1. Click Commits.
-2. Open the latest commit.
-3. Open Issue 1.
-4. Verify that the commit is referenced in the Issue timeline.
+As a system administrator,
+I want to configure CPU, memory and disk usage thresholds,
+so that I can customize when resource alerts are generated.
 
-## STEP 24: Update Issue Status
+TASKS:
+
+1. Configure CPU usage threshold.
+2. Configure memory usage threshold.
+3. Configure disk usage threshold.
+4. Store threshold configurations.
+5. Verify threshold settings.
+
+ACCEPTANCE CRITERIA:
+
+1. CPU threshold must be configurable.
+2. Memory threshold must be configurable.
+3. Disk threshold must be configurable.
+4. Configured thresholds must be used by the alert system.
+
+MODULE: CONFIGURATION
+PRIORITY: MEDIUM
+
+
+Click Create issue.
+
+STEP 15 – CREATE ISSUE 10: APPLICATION TESTING
+
+Title:
+
+Perform Server Monitoring Application Testing
+
+Description:
+
+text
+USER STORY:
+
+As a software tester,
+I want to test CPU, memory and disk monitoring functionality,
+so that I can ensure the application provides accurate server information.
+
+TASKS:
+
+1. Test CPU utilization monitoring.
+2. Test memory utilization monitoring.
+3. Test disk space monitoring.
+4. Test CPU alerts.
+5. Test memory alerts.
+6. Test disk alerts.
+7. Test overall server health dashboard.
+8. Verify application functionality.
+
+ACCEPTANCE CRITERIA:
+
+1. CPU monitoring must work correctly.
+2. Memory monitoring must work correctly.
+3. Disk monitoring must work correctly.
+4. Alerts must be generated correctly.
+5. Overall server health must be displayed correctly.
+
+MODULE: TESTING
+PRIORITY: HIGH
+
+
+Click Create issue.
+
+PART 4 – CONNECT ISSUES TO THE AGILE PROJECT BOARD
+STEP 16 – Add Issues to Project
+
+For each Issue:
+
+Open the Issue.
+Find Projects on the right side.
+Click the project selection option.
+Select Server Monitoring Agile Project Board.
+Repeat for all 10 Issues.
+
+Alternatively:
 
 Open the Project Board.
+Click Add item.
+Search for your repository Issues.
+Select the Issues to add.
 
-Move "Develop Daily Report Generator" to Done.
+Verify that all 10 Issues appear on the board.
 
-Move "Implement Scheduled Report Execution" to Done after verifying the Cron job.
+PART 5 – ORGANIZE TASKS INTO AGILE STATUS COLUMNS
+STEP 17 – Assign Initial Statuses
 
-Move "Maintain Project Version History" to Done after verifying the Git push.
+Use the following table:
 
-All three Issues should now appear in Done.
+Issue	Task Name	Status
+1	Implement CPU Usage Monitoring	To Do
+2	Develop CPU Usage Alert System	Backlog
+3	Implement Memory Usage Monitoring	In Progress
+4	Develop Memory Usage Alert System	Backlog
+5	Implement Disk Space Monitoring	To Do
+6	Develop Disk Space Alert System	Backlog
+7	Develop Overall Server Health Dashboard	In Progress
+8	Generate Server Resource Usage Reports	Backlog
+9	Configure CPU Memory and Disk Thresholds	To Do
+10	Perform Server Monitoring Application Testing	Done
 
----
+These are demonstration statuses. They do not mean that the corresponding features have already been implemented.
 
-# PART 8 – FINAL VERIFICATION
+STEP 18 – Move Issues into Columns
+Open the Project Board.
+Find each Issue card.
+Drag and drop it into the appropriate column.
+Verify that the Issues appear under the correct statuses.
 
-Verify:
+Your initial Agile board should look like this:
 
-1. New repository created.
-2. New GitHub Project Board created.
-3. Three new Issues created.
-4. Issues connected to the Project Board.
-5. Task statuses updated.
-6. Daily report script executed.
-7. Cron job configured and verified.
-8. Scheduled jobs mapped to Issues.
-9. Git commit linked with an Issue.
-10. Changes pushed successfully to GitHub.
+BACKLOG:
 
-## EXPECTED OUTPUT
+Develop CPU Usage Alert System
+Develop Memory Usage Alert System
+Develop Disk Space Alert System
+Generate Server Resource Usage Reports
 
-- A GitHub Project Board with Agile statuses.
-- Three GitHub Issues representing user stories.
-- A working Bash report generator.
-- A scheduled Cron job.
-- A report log file.
-- A Git commit referencing the appropriate Issue.
-- Completed tasks displayed in the Done status.
+TO DO:
 
-## RESULT
+Implement CPU Usage Monitoring
+Implement Disk Space Monitoring
+Configure CPU Memory and Disk Thresholds
 
-Thus, Agile project management was implemented using a new GitHub repository and GitHub Projects. User stories and Issues were created, tasks were tracked through Agile status columns, a scheduled reporting job was mapped to the corresponding Issues, and Git commits were linked to Agile tasks successfully.
+IN PROGRESS:
 
-## CLEANUP (OPTIONAL)
+Implement Memory Usage Monitoring
+Develop Overall Server Health Dashboard
 
-To stop the one-minute Cron job after the practical:
+DONE:
 
-```bash
-crontab -e
-```
+Perform Server Monitoring Application Testing
+PART 6 – CREATE A NEW LOCAL PROJECT IN UBUNTU
+STEP 19 – Open Ubuntu Terminal
 
-Delete only the line added for this experiment, then save and exit.
+Press:
 
-Verify:
+Ctrl + Alt + T
 
-```bash
-crontab -l
-```
+Run:
 
+bash
+cd ~
 
+STEP 20 – Clone the GitHub Repository
 
+Run:
 
-SERVER MONITORING APPLICATION
-Agile Project Management Plan
-1. Project Overview
+bash
+git clone https://github.com/YOUR_USERNAME/server-monitoring-agile.git
 
-Project Name: Server Monitoring Application
 
-Project Type: Software Development
+Replace YOUR_USERNAME with your GitHub username.
 
-Project Management Methodology: Agile Scrum / Kanban
+Enter the project folder:
 
-Platform: GitHub
-
-Project Description:
-
-The Server Monitoring Application is a software system designed to monitor server performance and resource utilization in real time.
-
-The application monitors three major server resources:
-
-CPU Monitoring
-Memory Monitoring
-Disk Monitoring
-
-The system collects server performance information, displays monitoring data, identifies resource usage problems and generates alerts when resource utilization exceeds predefined thresholds.
-
-2. Project Objectives
-Monitor CPU utilization in real time.
-Monitor memory utilization in real time.
-Monitor disk space utilization.
-Display server performance information through a dashboard.
-Generate alerts when resource usage exceeds thresholds.
-Maintain monitoring history.
-Help administrators identify server performance problems.
-3. Project Scope
-
-Included Features:
-
-CPU usage monitoring.
-Memory usage monitoring.
-Disk space monitoring.
-Server health dashboard.
-Performance data collection.
-Threshold configuration.
-Alert notifications.
-Monitoring history.
-Testing and documentation.
-4. Agile User Stories
-EPIC 1: CPU MONITORING
-
-US-01: View CPU Utilization
-
-As a system administrator, I want to view real-time CPU utilization so that I can understand server processor performance.
-
-Acceptance Criteria:
-
-The system collects CPU utilization data.
-CPU usage is displayed as a percentage.
-The dashboard displays current CPU utilization.
-CPU monitoring data is refreshed periodically.
-
-US-02: CPU Usage Alerts
-
-As a system administrator, I want to receive an alert when CPU utilization exceeds a predefined threshold so that I can investigate performance problems.
-
-Acceptance Criteria:
-
-The administrator can configure a CPU threshold.
-The system checks CPU utilization against the threshold.
-An alert is generated when the threshold is exceeded.
-The alert displays the current CPU usage.
-
-US-03: CPU Monitoring History
-
-As a system administrator, I want to view historical CPU utilization so that I can identify performance trends.
-
-Acceptance Criteria:
-
-CPU utilization history is stored.
-Historical CPU data can be displayed.
-The administrator can identify CPU usage trends.
-EPIC 2: MEMORY MONITORING
-
-US-04: View Memory Utilization
-
-As a system administrator, I want to view memory utilization so that I can understand how much RAM is being used by the server.
-
-Acceptance Criteria:
-
-The system collects total memory.
-The system collects used memory.
-The system calculates available memory.
-Memory utilization is displayed as a percentage.
-
-US-05: Memory Usage Alerts
-
-As a system administrator, I want to receive an alert when memory utilization exceeds a predefined threshold so that I can prevent memory-related performance problems.
-
-Acceptance Criteria:
-
-The administrator can configure a memory threshold.
-The system continuously checks memory usage.
-An alert is generated when the threshold is exceeded.
-The alert displays memory utilization.
-
-US-06: Memory Monitoring History
-
-As a system administrator, I want to view historical memory utilization so that I can identify memory consumption trends.
-
-Acceptance Criteria:
-
-Memory utilization data is recorded.
-Historical memory information is available.
-Memory usage trends can be reviewed.
-EPIC 3: DISK MONITORING
-
-US-07: View Disk Utilization
-
-As a system administrator, I want to view disk utilization so that I can understand available and used storage space.
-
-Acceptance Criteria:
-
-The system identifies available disk storage.
-The system identifies used disk storage.
-Disk utilization is calculated.
-Disk usage is displayed as a percentage.
-
-US-08: Disk Space Alerts
-
-As a system administrator, I want to receive an alert when disk utilization exceeds a predefined threshold so that I can prevent storage-related problems.
-
-Acceptance Criteria:
-
-The administrator can configure a disk threshold.
-The system checks disk utilization.
-An alert is generated when the threshold is exceeded.
-The alert displays the disk usage percentage.
-
-US-09: Disk Monitoring History
-
-As a system administrator, I want to view historical disk utilization so that I can identify storage growth trends.
-
-Acceptance Criteria:
-
-Disk utilization data is recorded.
-Historical disk information is available.
-Disk usage trends can be reviewed.
-EPIC 4: DASHBOARD AND SERVER HEALTH
-
-US-10: Server Monitoring Dashboard
-
-As a system administrator, I want to view CPU, memory and disk information in one dashboard so that I can monitor overall server performance.
-
-Acceptance Criteria:
-
-The dashboard displays CPU utilization.
-The dashboard displays memory utilization.
-The dashboard displays disk utilization.
-Monitoring information is easy to understand.
-
-US-11: Server Health Status
-
-As a system administrator, I want to view the overall server health status so that I can quickly identify server resource problems
+bash
+cd server-monitoring-agile
