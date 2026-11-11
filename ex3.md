@@ -1,268 +1,482 @@
 
 # EXPERIMENT 3 – AGILE PROJECT MANAGEMENT WITH GIT
 
-**Subject:** Open Source Systems, Agile Tools and Prompt Engineering  
-**Name:** Sharon Christy R  
-**Register Number:** 26120159
-
 ## AIM
 
-To implement Agile project management using GitHub Projects by creating user stories, managing issues, tracking task progress, mapping scheduled jobs to issues, and linking Git commits with Agile tasks.
+To implement Agile project management using GitHub Projects, create user stories and issues, track task progress, map scheduled jobs to Agile tasks, and link Git commits with GitHub Issues.
 
 ## SOFTWARE REQUIREMENTS
 
 - Ubuntu Linux
 - Git
 - GitHub Account
-- GitHub Repository
 - GitHub Projects
 
-## PROCEDURE
+## IMPORTANT
 
-### STEP 1: OPEN GITHUB
+This experiment is completely independent.
+
+Create:
+- A NEW GitHub repository
+- A NEW GitHub Project Board
+- NEW GitHub Issues
+- A NEW local project folder
+
+Do not use any previous experiment's repository or files.
+
+---
+
+# PART 1 – CREATE A NEW GITHUB REPOSITORY
+
+## STEP 1: Open GitHub
 
 1. Open https://github.com
-2. Log in using your GitHub account.
-3. Open your profile.
-4. Select **Your projects**.
+2. Log in to your GitHub account.
+3. Click the + icon at the top.
+4. Select New repository.
 
-### STEP 2: CREATE A NEW PROJECT BOARD
+## STEP 2: Create Repository
 
-1. Click **New project**.
-2. Select **Board**.
-3. Enter the project name:
+Enter:
 
-   `Software Development Task Management`
+Repository name:
 
-4. Click **Create project**.
+`agile-project-lab`
 
-This creates a new Agile Project Board.
+Description:
 
-### STEP 3: CONFIGURE PROJECT STATUS
+`Agile project management using Git and GitHub Projects`
 
-Configure the following status options:
+Visibility: Public
+
+Select **Add a README file**.
+
+Click **Create repository**.
+
+Your NEW repository URL will be:
+
+https://github.com/Sharon-Christy/agile-project-lab
+
+---
+
+# PART 2 – CREATE A NEW AGILE PROJECT BOARD
+
+## STEP 3: Create GitHub Project
+
+1. Click your GitHub profile picture.
+2. Select Your projects.
+3. Click New project.
+4. Select Board.
+5. Enter the name:
+
+`Agile Software Development Management`
+
+6. Click Create project.
+
+## STEP 4: Configure Status Columns
+
+Configure these statuses:
 
 1. Backlog
 2. To Do
 3. In Progress
 4. Done
 
-If Backlog is not available:
+If Backlog is missing:
 
 1. Open the Status field menu.
 2. Select Edit field.
-3. Add a new option named Backlog.
-4. Save the changes.
+3. Add Backlog.
+4. Save changes.
 
-### STEP 4: OPEN THE GITHUB REPOSITORY
+---
 
-Open the existing repository:
+# PART 3 – CREATE NEW AGILE ISSUES
 
-https://github.com/Sharon-Christy/automation-lab
+## STEP 5: Open the New Repository
 
-The repository is used to create and track the Issues associated with the new Agile Project.
+Open:
 
-### STEP 5: CREATE ISSUE 1
+https://github.com/Sharon-Christy/agile-project-lab
 
-1. Open the **Issues** tab.
-2. Click **New issue**.
-3. Enter the following details.
+Select Issues.
 
-**Title:**
+If Issues is unavailable, open repository Settings and enable Issues under Features.
 
-`Automate Daily Project Report`
+## STEP 6: Create Issue 1
 
-**Description:**
+Click New issue.
 
-As a software developer, I want to generate daily project reports automatically, so that the team can monitor project execution.
+Title:
 
-Tasks:
-1. Create a report generation script.
-2. Schedule the script using Cron.
-3. Store execution results in a log file.
-4. Track the generated report.
+`Develop Daily Report Generator`
 
-Click **Create issue**.
+Description:
 
-### STEP 6: CREATE ISSUE 2
+```text
+User Story:
 
-Click **New issue**.
-
-**Title:**
-
-`Implement Automated Git Backup`
-
-**Description:**
-
-As a software developer, I want to automatically commit and push project files, so that project changes are safely maintained.
+As a project manager,
+I want to generate daily progress reports,
+so that I can monitor team activities.
 
 Tasks:
-1. Initialize Git repository.
-2. Track project files.
-3. Automatically commit changes.
-4. Push changes to GitHub.
+1. Create a Bash script.
+2. Generate a daily report.
+3. Save the report in a log file.
+4. Verify execution.
+```
 
-Click **Create issue**.
+Click Create issue.
 
-### STEP 7: CREATE ISSUE 3
+Remember the actual Issue number displayed by GitHub.
 
-Click **New issue**.
+## STEP 7: Create Issue 2
 
-**Title:**
+Click New issue.
 
-`Validate Project Scripts`
+Title:
 
-**Description:**
+`Implement Scheduled Report Execution`
 
-As a team leader, I want project scripts to be validated, so that incorrect files are not committed.
+Description:
+
+```text
+User Story:
+
+As a developer,
+I want the report script to run automatically,
+so that manual execution is not required.
 
 Tasks:
-1. Create a pre-commit hook.
-2. Validate project files.
-3. Display validation results.
-4. Allow or reject commits based on validation.
+1. Configure Cron.
+2. Schedule daily execution.
+3. Verify scheduled execution.
+4. Check generated reports.
+```
 
-Click **Create issue**.
+Click Create issue.
 
-### STEP 8: ADD ISSUES TO THE PROJECT BOARD
+## STEP 8: Create Issue 3
 
-1. Open the first Issue.
-2. Find the Projects section on the right side.
-3. Select `Software Development Task Management`.
-4. Repeat the same process for the remaining Issues.
+Click New issue.
 
-Alternatively, open the Project Board, click Add item, and search for the Issues.
+Title:
 
-Verify that all three Issues appear on the Project Board.
+`Maintain Project Version History`
 
-### STEP 9: UPDATE TASK STATUS
+Description:
 
-Move the Issues through the following stages:
+```text
+User Story:
 
-Backlog → To Do → In Progress → Done
+As a developer,
+I want to track project changes using Git,
+so that the development history is maintained.
 
-Example:
+Tasks:
+1. Track source files.
+2. Commit project changes.
+3. Push changes to GitHub.
+4. Link commits with issues.
+```
 
-| Issue | Initial Status | Updated Status |
-|---|---|---|
-| Automate Daily Project Report | Backlog | Done |
-| Implement Automated Git Backup | To Do | In Progress |
-| Validate Project Scripts | Backlog | To Do |
+Click Create issue.
 
-Update the Status field directly from the Project Board.
+---
 
-### STEP 10: MAP SCHEDULED JOBS TO AGILE ISSUES
+# PART 4 – CONNECT ISSUES TO PROJECT BOARD
 
-Map the scheduled jobs to their corresponding Issues.
+## STEP 9: Add Issues
 
-| Scheduled Job | GitHub Issue |
+1. Open Issue 1.
+2. Find Projects on the right.
+3. Select Agile Software Development Management.
+4. Repeat for Issue 2 and Issue 3.
+
+Alternatively, open the Project Board and use Add item to find the repository Issues.
+
+Verify that all three Issues appear.
+
+## STEP 10: Update Agile Status
+
+Use these statuses:
+
+| Task | Status |
 |---|---|
-| Generate daily project report | Issue 1 |
-| Automatically back up Git files | Issue 2 |
-| Validate project scripts | Issue 3 |
+| Develop Daily Report Generator | In Progress |
+| Implement Scheduled Report Execution | To Do |
+| Maintain Project Version History | Backlog |
 
-This mapping connects automation activities with Agile tasks and helps track their progress.
+After completing a task, move it to Done.
 
-### STEP 11: CLONE THE REPOSITORY IN UBUNTU
+---
 
-Open Ubuntu terminal.
+# PART 5 – CREATE NEW PROJECT IN UBUNTU
 
-Create a separate local working copy:
+## STEP 11: Open Ubuntu Terminal
+
+Go to home directory:
 
 ```bash
 cd ~
-git clone https://github.com/Sharon-Christy/automation-lab.git exercise3_lab
 ```
 
-Enter the new directory:
+Clone the NEW repository:
 
 ```bash
-cd exercise3_lab
+git clone https://github.com/Sharon-Christy/agile-project-lab.git
 ```
 
-Configure Git identity if required:
+Enter the folder:
+
+```bash
+cd agile-project-lab
+```
+
+Verify:
+
+```bash
+git status
+```
+
+## STEP 12: Configure Git Identity
+
+Only if Git identity is not already configured:
 
 ```bash
 git config --global user.name "Sharon Christy R"
 git config --global user.email "YOUR_GITHUB_EMAIL"
 ```
 
-### STEP 12: CREATE AN AGILE TASK FILE
+Replace YOUR_GITHUB_EMAIL with your GitHub email.
 
-Create a file:
+## STEP 13: Create Daily Report Script
 
 ```bash
-nano agile_task.txt
+nano daily_report.sh
 ```
 
-Enter the following content:
+Paste:
+
+```bash
+#!/bin/bash
+
+echo "AGILE PROJECT DAILY REPORT"
+echo "--------------------------"
+echo "Project: Agile Software Development"
+echo "Task: Daily Report Generation"
+echo "Status: Completed"
+echo "Date: $(date)"
+```
+
+Save:
+
+1. Ctrl + O
+2. Enter
+3. Ctrl + X
+
+## STEP 14: Give Execution Permission
+
+```bash
+chmod +x daily_report.sh
+```
+
+## STEP 15: Execute Script
+
+```bash
+./daily_report.sh
+```
+
+Expected output:
 
 ```text
-Project: Software Development
-Task: Automate Daily Project Report
-Issue: #1
+AGILE PROJECT DAILY REPORT
+--------------------------
+Project: Agile Software Development
+Task: Daily Report Generation
 Status: Completed
+Date: [current date and time]
 ```
 
-Save the file:
-
-- Press Ctrl + O.
-- Press Enter.
-- Press Ctrl + X.
-
-### STEP 13: ADD THE FILE TO GIT
+## STEP 16: Generate Report Log
 
 ```bash
-git add agile_task.txt
+./daily_report.sh >> report.log
 ```
 
-This stages the new file for committing.
-
-### STEP 14: COMMIT THE CHANGES WITH ISSUE NUMBER
+Verify:
 
 ```bash
-git commit -m "Complete daily report task #1"
+cat report.log
 ```
 
-Replace `#1` with the actual Issue number if it is different.
+---
 
-The Issue number helps GitHub associate the commit with the corresponding Issue.
+# PART 6 – MAP SCHEDULED JOBS TO AGILE ISSUES
 
-### STEP 15: PUSH CHANGES TO GITHUB
+## STEP 17: Create Cron Schedule
+
+Open Cron editor:
+
+```bash
+crontab -e
+```
+
+Choose Nano if asked.
+
+Add this line:
+
+```cron
+* * * * * /bin/bash /home/$USER/agile-project-lab/daily_report.sh >> /home/$USER/agile-project-lab/report.log 2>&1
+```
+
+IMPORTANT: Cron does not reliably expand $USER in paths.
+
+Therefore, replace the line above with your actual Ubuntu username. For example:
+
+```cron
+* * * * * /bin/bash /home/sharon_christy_r/agile-project-lab/daily_report.sh >> /home/sharon_christy_r/agile-project-lab/report.log 2>&1
+```
+
+Save and exit.
+
+Check:
+
+```bash
+crontab -l
+```
+
+Wait approximately one minute.
+
+Check:
+
+```bash
+cat report.log
+```
+
+The report should contain new execution entries if Cron is running.
+
+If necessary:
+
+```bash
+sudo systemctl start cron
+```
+
+## STEP 18: Map Jobs to Issues
+
+| Scheduled Activity | Agile Issue |
+|---|---|
+| Generate daily report | Develop Daily Report Generator |
+| Schedule report with Cron | Implement Scheduled Report Execution |
+| Track project changes | Maintain Project Version History |
+
+Update the corresponding Issue status manually after verifying the activity.
+
+---
+
+# PART 7 – LINK GIT COMMITS WITH AGILE ISSUES
+
+## STEP 19: Check Git Status
+
+```bash
+git status
+```
+
+## STEP 20: Stage Project Files
+
+```bash
+git add daily_report.sh report.log
+```
+
+## STEP 21: Commit with Issue Reference
+
+Use the actual Issue number for "Develop Daily Report Generator".
+
+If the Issue number is 1:
+
+```bash
+git commit -m "Implement daily report generator refs #1"
+```
+
+The `refs #1` text links the commit to Issue #1 without automatically closing it.
+
+## STEP 22: Push to GitHub
 
 ```bash
 git push origin main
 ```
 
-This uploads the committed changes to the GitHub repository.
+For HTTPS authentication, use an authorized GitHub Personal Access Token or browser-based login, not your normal GitHub password.
 
-If GitHub asks for HTTPS authentication, use an authorized Personal Access Token or browser-based authentication, not the normal account password.
-
-### STEP 16: VERIFY THE COMMIT
-
-Execute:
+## STEP 23: Verify Commit History
 
 ```bash
 git log --oneline
 ```
 
-Open the GitHub repository and verify the latest commit.
+Open the GitHub repository.
 
-Open the corresponding Issue and check its timeline for the commit reference.
+1. Click Commits.
+2. Open the latest commit.
+3. Open Issue 1.
+4. Verify that the commit is referenced in the Issue timeline.
 
-**Note:** Mentioning an Issue number creates a reference. To automatically close an Issue when a commit is merged into the default branch, use a closing keyword such as `Closes #1`.
+## STEP 24: Update Issue Status
 
-### STEP 17: FINAL VERIFICATION
+Open the Project Board.
 
-Verify the following:
+Move "Develop Daily Report Generator" to Done.
 
-1. A new Agile Project Board has been created.
-2. Three new Issues have been created.
-3. All Issues have been added to the Project Board.
-4. Task statuses have been updated.
-5. Scheduled jobs have been mapped to Issues.
-6. Git commits have been linked to the corresponding Issues.
+Move "Implement Scheduled Report Execution" to Done after verifying the Cron job.
+
+Move "Maintain Project Version History" to Done after verifying the Git push.
+
+All three Issues should now appear in Done.
+
+---
+
+# PART 8 – FINAL VERIFICATION
+
+Verify:
+
+1. New repository created.
+2. New GitHub Project Board created.
+3. Three new Issues created.
+4. Issues connected to the Project Board.
+5. Task statuses updated.
+6. Daily report script executed.
+7. Cron job configured and verified.
+8. Scheduled jobs mapped to Issues.
+9. Git commit linked with an Issue.
+10. Changes pushed successfully to GitHub.
+
+## EXPECTED OUTPUT
+
+- A GitHub Project Board with Agile statuses.
+- Three GitHub Issues representing user stories.
+- A working Bash report generator.
+- A scheduled Cron job.
+- A report log file.
+- A Git commit referencing the appropriate Issue.
+- Completed tasks displayed in the Done status.
 
 ## RESULT
 
-Thus, Agile project management was implemented successfully using GitHub Projects and Git. A new Project Board was created, user stories and Issues were added, task progress was tracked using different statuses, scheduled jobs were mapped to Agile Issues, and Git commits were associated with the corresponding tasks.
+Thus, Agile project management was implemented using a new GitHub repository and GitHub Projects. User stories and Issues were created, tasks were tracked through Agile status columns, a scheduled reporting job was mapped to the corresponding Issues, and Git commits were linked to Agile tasks successfully.
+
+## CLEANUP (OPTIONAL)
+
+To stop the one-minute Cron job after the practical:
+
+```bash
+crontab -e
+```
+
+Delete only the line added for this experiment, then save and exit.
+
+Verify:
+
+```bash
+crontab -l
+```
