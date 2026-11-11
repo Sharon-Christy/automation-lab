@@ -1,387 +1,161 @@
+SERVER MONITORING APPLICATION
+Agile Project Management Plan
+1. Project Overview
 
-# EXPERIMENT 1 – JOB SCHEDULING AND AUTOMATION IN LINUX
+Project Name: Server Monitoring Application
 
-**Subject:** Open Source Systems, Agile Tools and Prompt Engineering  
-**Name:** Sharon Christy R  
-**Register Number:** 26120159
+Project Type: Software Development
 
----
+Project Management Methodology: Agile Scrum / Kanban
 
-## AIM
+Platform: GitHub
 
-To automate the execution of shell scripts in Linux using Cron and systemd timers.
+Project Description:
 
-## SOFTWARE REQUIREMENTS
+The Server Monitoring Application is a software system designed to monitor server performance and resource utilization in real time.
 
-1. Ubuntu Linux
-2. Bash Shell
-3. Cron
-4. systemd
-5. Text Editor (Nano)
+The application monitors three major server resources:
 
-## EXPERIMENT OVERVIEW
+CPU Monitoring
+Memory Monitoring
+Disk Monitoring
 
-In this experiment, a shell script is created to generate a daily project report.
+The system collects server performance information, displays monitoring data, identifies resource usage problems and generates alerts when resource utilization exceeds predefined thresholds.
 
-The script is scheduled to execute automatically using:
-1. Cron
-2. systemd timer
+2. Project Objectives
+Monitor CPU utilization in real time.
+Monitor memory utilization in real time.
+Monitor disk space utilization.
+Display server performance information through a dashboard.
+Generate alerts when resource usage exceeds thresholds.
+Maintain monitoring history.
+Help administrators identify server performance problems.
+3. Project Scope
 
-The generated output is stored in a log file and verified.
+Included Features:
 
----
+CPU usage monitoring.
+Memory usage monitoring.
+Disk space monitoring.
+Server health dashboard.
+Performance data collection.
+Threshold configuration.
+Alert notifications.
+Monitoring history.
+Testing and documentation.
+4. Agile User Stories
+EPIC 1: CPU MONITORING
 
-# PART 1 – CREATE A NEW PROJECT DIRECTORY
+US-01: View CPU Utilization
 
-## STEP 1: OPEN UBUNTU TERMINAL
+As a system administrator, I want to view real-time CPU utilization so that I can understand server processor performance.
 
-Open Ubuntu terminal.
+Acceptance Criteria:
 
-Move to the home directory:
+The system collects CPU utilization data.
+CPU usage is displayed as a percentage.
+The dashboard displays current CPU utilization.
+CPU monitoring data is refreshed periodically.
 
-```bash
-cd ~
-```
+US-02: CPU Usage Alerts
 
-Create a new project directory:
+As a system administrator, I want to receive an alert when CPU utilization exceeds a predefined threshold so that I can investigate performance problems.
 
-```bash
-mkdir linux-automation-lab
-```
+Acceptance Criteria:
 
-Enter the directory:
+The administrator can configure a CPU threshold.
+The system checks CPU utilization against the threshold.
+An alert is generated when the threshold is exceeded.
+The alert displays the current CPU usage.
 
-```bash
-cd linux-automation-lab
-```
+US-03: CPU Monitoring History
 
-Verify the current location:
+As a system administrator, I want to view historical CPU utilization so that I can identify performance trends.
 
-```bash
-pwd
-```
+Acceptance Criteria:
 
----
+CPU utilization history is stored.
+Historical CPU data can be displayed.
+The administrator can identify CPU usage trends.
+EPIC 2: MEMORY MONITORING
 
-# PART 2 – CREATE A SHELL SCRIPT
+US-04: View Memory Utilization
 
-## STEP 2: CREATE THE DAILY REPORT SCRIPT
+As a system administrator, I want to view memory utilization so that I can understand how much RAM is being used by the server.
 
-Create a new file:
+Acceptance Criteria:
 
-```bash
-nano daily_report.sh
-```
+The system collects total memory.
+The system collects used memory.
+The system calculates available memory.
+Memory utilization is displayed as a percentage.
 
-Enter the following code:
+US-05: Memory Usage Alerts
 
-```bash
-#!/bin/bash
+As a system administrator, I want to receive an alert when memory utilization exceeds a predefined threshold so that I can prevent memory-related performance problems.
 
-echo "DAILY AUTOMATION REPORT"
-echo "-----------------------"
-echo "Project: Software Development"
-echo "Status: Successful"
-echo "Execution Date: $(date)"
-```
+Acceptance Criteria:
 
-Save the file:
+The administrator can configure a memory threshold.
+The system continuously checks memory usage.
+An alert is generated when the threshold is exceeded.
+The alert displays memory utilization.
 
-1. Press Ctrl + O.
-2. Press Enter.
-3. Press Ctrl + X.
+US-06: Memory Monitoring History
 
-## STEP 3: GIVE EXECUTION PERMISSION
+As a system administrator, I want to view historical memory utilization so that I can identify memory consumption trends.
 
-Run:
+Acceptance Criteria:
 
-```bash
-chmod +x daily_report.sh
-```
+Memory utilization data is recorded.
+Historical memory information is available.
+Memory usage trends can be reviewed.
+EPIC 3: DISK MONITORING
 
-This gives permission to execute the shell script.
+US-07: View Disk Utilization
 
-## STEP 4: EXECUTE THE SCRIPT
+As a system administrator, I want to view disk utilization so that I can understand available and used storage space.
 
-Run:
+Acceptance Criteria:
 
-```bash
-./daily_report.sh
-```
+The system identifies available disk storage.
+The system identifies used disk storage.
+Disk utilization is calculated.
+Disk usage is displayed as a percentage.
 
-EXPECTED OUTPUT:
+US-08: Disk Space Alerts
 
-```text
-DAILY AUTOMATION REPORT
------------------------
-Project: Software Development
-Status: Successful
-Execution Date: [current date and time]
-```
+As a system administrator, I want to receive an alert when disk utilization exceeds a predefined threshold so that I can prevent storage-related problems.
 
----
+Acceptance Criteria:
 
-# PART 3 – AUTOMATE USING CRON
+The administrator can configure a disk threshold.
+The system checks disk utilization.
+An alert is generated when the threshold is exceeded.
+The alert displays the disk usage percentage.
 
-## STEP 5: OPEN CRON EDITOR
+US-09: Disk Monitoring History
 
-Run:
+As a system administrator, I want to view historical disk utilization so that I can identify storage growth trends.
 
-```bash
-crontab -e
-```
+Acceptance Criteria:
 
-If asked to select an editor, choose Nano.
+Disk utilization data is recorded.
+Historical disk information is available.
+Disk usage trends can be reviewed.
+EPIC 4: DASHBOARD AND SERVER HEALTH
 
-Add the following line at the bottom:
+US-10: Server Monitoring Dashboard
 
-```cron
-* * * * * /bin/bash /home/sharon_christy_r/linux-automation-lab/daily_report.sh >> /home/sharon_christy_r/linux-automation-lab/report.log 2>&1
-```
+As a system administrator, I want to view CPU, memory and disk information in one dashboard so that I can monitor overall server performance.
 
-This schedules the script to execute every minute and stores the output in report.log.
+Acceptance Criteria:
 
-Save and exit Nano.
+The dashboard displays CPU utilization.
+The dashboard displays memory utilization.
+The dashboard displays disk utilization.
+Monitoring information is easy to understand.
 
-NOTE:
-If your Ubuntu username is different, replace `sharon_christy_r` with your actual username.
+US-11: Server Health Status
 
-## STEP 6: VERIFY CRON JOB
-
-Run:
-
-```bash
-crontab -l
-```
-
-This displays the scheduled Cron jobs.
-
-## STEP 7: CHECK GENERATED LOG FILE
-
-Wait approximately one minute.
-
-Run:
-
-```bash
-cat report.log
-```
-
-EXPECTED OUTPUT:
-
-The log file displays the daily automation report with execution date and time.
-
-Multiple entries may appear because the Cron job executes every minute.
-
-## STEP 8: CHECK CRON SERVICE
-
-Run:
-
-```bash
-sudo systemctl status cron
-```
-
-If Cron is not running, start it:
-
-```bash
-sudo systemctl start cron
-```
-
----
-
-# PART 4 – AUTOMATE USING SYSTEMD TIMER
-
-## STEP 9: CREATE SYSTEMD SERVICE FILE
-
-Create a service file:
-
-```bash
-sudo nano /etc/systemd/system/daily-report.service
-```
-
-Enter:
-
-```ini
-[Unit]
-Description=Daily Automation Report
-
-[Service]
-Type=oneshot
-ExecStart=/bin/bash /home/sharon_christy_r/linux-automation-lab/daily_report.sh
-```
-
-Save and exit.
-
-NOTE:
-Replace the username in the path if necessary.
-
-## STEP 10: CREATE SYSTEMD TIMER FILE
-
-Create:
-
-```bash
-sudo nano /etc/systemd/system/daily-report.timer
-```
-
-Enter:
-
-```ini
-[Unit]
-Description=Run Daily Report Every Minute
-
-[Timer]
-OnCalendar=*-*-* *:*:00
-Persistent=true
-Unit=daily-report.service
-
-[Install]
-WantedBy=timers.target
-```
-
-Save and exit.
-
-## STEP 11: RELOAD SYSTEMD
-
-Run:
-
-```bash
-sudo systemctl daemon-reload
-```
-
-This reloads the systemd configuration files.
-
-## STEP 12: ENABLE AND START THE TIMER
-
-Run:
-
-```bash
-sudo systemctl enable --now daily-report.timer
-```
-
-This enables the timer and starts it immediately.
-
-## STEP 13: VERIFY THE TIMER
-
-Run:
-
-```bash
-systemctl list-timers
-```
-
-The output displays the scheduled systemd timers.
-
-## STEP 14: EXECUTE THE SERVICE MANUALLY
-
-Run:
-
-```bash
-sudo systemctl start daily-report.service
-```
-
-Check service status:
-
-```bash
-sudo systemctl status daily-report.service
-```
-
-A successful execution may show `status=0/SUCCESS`.
-
-## STEP 15: VIEW SERVICE LOGS
-
-Run:
-
-```bash
-journalctl -u daily-report.service
-```
-
-This displays the execution logs of the service.
-
----
-
-# PART 5 – STOP AUTOMATION
-
-## STEP 16: STOP THE SYSTEMD TIMER
-
-Run:
-
-```bash
-sudo systemctl disable --now daily-report.timer
-```
-
-This disables and stops the timer.
-
-## STEP 17: REMOVE THE CRON JOB
-
-Open:
-
-```bash
-crontab -e
-```
-
-Delete only the Cron line added for this experiment.
-
-Save and exit.
-
-Verify:
-
-```bash
-crontab -l
-```
-
----
-
-# PART 6 – FINAL VERIFICATION
-
-Verify the following:
-
-1. New project directory created.
-2. Shell script created successfully.
-3. Execution permission provided.
-4. Shell script executed successfully.
-5. Cron job scheduled.
-6. Report log generated.
-7. Cron service verified.
-8. systemd service created.
-9. systemd timer created and enabled.
-10. Service execution verified.
-11. Execution logs displayed.
-12. Automation stopped after verification.
-
-## EXPECTED OUTPUT
-
-- Daily automation report displayed in the terminal.
-- Cron job listed successfully.
-- Report output stored in report.log.
-- systemd timer displayed in the timer list.
-- Service execution completed successfully.
-- Service logs displayed using journalctl.
-
-## RESULT
-
-Thus, job scheduling and automation were implemented successfully in Linux using Cron and systemd timers. The shell script was executed automatically, and the generated reports and service logs were verified.
-
----
-
-# OPTIONAL COMMANDS FOR QUICK REVISION
-
-| Command | Purpose |
-|---|---|
-| `pwd` | Display current directory |
-| `mkdir folder` | Create directory |
-| `cd folder` | Enter directory |
-| `nano file.sh` | Create or edit a file |
-| `chmod +x file.sh` | Give execution permission |
-| `./file.sh` | Execute shell script |
-| `crontab -e` | Edit Cron jobs |
-| `crontab -l` | List Cron jobs |
-| `cat report.log` | Display log file |
-| `sudo systemctl status cron` | Check Cron service |
-| `systemctl list-timers` | List systemd timers |
-| `journalctl -u daily-report.service` | Display service logs |
-
-## IMPORTANT
-
-Cron and systemd timers are two separate scheduling methods.
-
-Cron schedules commands directly using crontab.
-
-systemd uses a service file to define the task and a timer file to schedule it.
+As a system administrator, I want to view the overall server health status so that I can quickly identify server resource problems
