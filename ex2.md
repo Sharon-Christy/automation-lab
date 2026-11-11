@@ -1,279 +1,160 @@
-
-# EXERCISE 2 – GIT AND GITHUB INTEGRATION
-
-**Subject:** Open Source Systems, Agile Tools and Prompt Engineering  
-**Name:** Sharon Christy R  
-**Register Number:** 26120159
+# EXPERIMENT – AGILE PROJECT MANAGEMENT USING GITHUB FOR SERVER MONITORING APPLICATION
 
 ## AIM
-To initialize Git repositories, track changes, commit files, automatically commit job outputs using Bash scripts, push changes to GitHub, manage branches, and implement Git hooks to validate project files.
 
-## A. INITIALIZE GIT REPOSITORY
+To implement Agile project management using GitHub Projects by creating an Agile Project Board for a Server Monitoring Application, developing user stories for CPU, Memory, Disk and Overall Server Health Monitoring, creating GitHub Issues, organizing tasks into Backlog, To Do, In Progress and Done, and linking Git commits with GitHub Issues.
 
-### Step 1: Create a project folder
-```bash
-mkdir git_lab
-cd git_lab
-```
+## SOFTWARE REQUIREMENTS
 
-### Step 2: Create a sample script
-```bash
-nano project.sh
-```
+- Ubuntu Linux
+- Git
+- GitHub Account
+- GitHub Repository
+- GitHub Projects
 
-Enter:
-```bash
-#!/bin/bash
-echo "Software Development Project"
-echo "Project Status: Successful"
-echo "Execution Date: $(date)"
-```
+## PROJECT DESCRIPTION
 
-Save: Ctrl+O, Enter, Ctrl+X.
+A software company is developing a Server Monitoring Application to monitor server resources and identify performance problems.
 
-### Step 3: Give execution permission and run
-```bash
-chmod +x project.sh
-./project.sh
-```
+The application includes:
 
-### Step 4: Configure Git identity
-```bash
-git config --global user.name "Sharon Christy R"
-git config --global user.email "YOUR_GITHUB_EMAIL"
-```
+1. CPU Monitoring – Monitor CPU utilization and identify high CPU usage.
+2. Memory Monitoring – Monitor RAM utilization and identify memory shortages.
+3. Disk Monitoring – Monitor disk space and identify low storage availability.
+4. Overall Server Health – Display the overall health status of the server.
 
-### Step 5: Initialize Git
-```bash
-git init
-git status
-```
+## IMPORTANT
 
-### Step 6: Add files
-```bash
-git add .
-git status
-```
+This experiment is completely independent.
 
-### Step 7: Commit changes
-```bash
-git commit -m "Initial project commit"
-```
+Create:
 
-### Step 8: View commit history
-```bash
-git log --oneline
-```
+- A NEW GitHub repository.
+- A NEW GitHub Project Board.
+- NEW GitHub Issues.
+- A NEW local project folder.
 
-## B. CONNECT AND PUSH TO GITHUB
+Do not use any previous experiment's repository or files.
+
+---
+
+# PART 1 – CREATE A NEW GITHUB REPOSITORY
+
+## STEP 1 – Open GitHub
 
 1. Open https://github.com
-2. Click + → New repository.
-3. Repository name: git-lab
-4. Select Public.
-5. Do not initialize with README.
-6. Click Create repository.
+2. Log in to your GitHub account.
+3. Click the + icon at the top-right corner.
+4. Select New repository.
 
-### Step 9: Connect remote repository
+## STEP 2 – Create Repository
 
-Replace YOUR_USERNAME with the GitHub username and use the actual repository URL.
+Enter the following details:
 
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/git-lab.git
-git remote -v
-```
+**Repository name:**
 
-### Step 10: Push to GitHub
-```bash
-git branch -M main
-git push -u origin main
-```
+`server-monitoring-agile`
 
-If authentication is requested:
-- Username: GitHub username.
-- Password prompt: Personal Access Token (PAT), not normal GitHub password.
+**Description:**
 
-## C. BRANCH MANAGEMENT
+`Agile project management for CPU, Memory, Disk and Server Health Monitoring Application`
 
-### Step 11: Create a branch
-```bash
-git branch feature-report
-git branch
-```
+**Visibility:** Public
 
-### Step 12: Switch to the branch
-```bash
-git switch feature-report
-```
+Select Add a README file.
 
-### Step 13: Modify the project
-```bash
-nano project.sh
-```
+Click Create repository.
 
-Add:
-```bash
-echo "New report feature added"
-```
+Your repository URL will be:
 
-### Step 14: Commit the change
-```bash
-git add project.sh
-git commit -m "Add report feature"
-```
+`https://github.com/YOUR_USERNAME/server-monitoring-agile`
 
-### Step 15: Push the branch
-```bash
-git push -u origin feature-report
-```
+Replace YOUR_USERNAME with your actual GitHub username.
 
-### Step 16: Switch to main
-```bash
-git switch main
-```
+---
 
-### Step 17: Merge the feature branch
-```bash
-git merge feature-report
-```
+# PART 2 – CREATE A NEW AGILE PROJECT BOARD
 
-### Step 18: Push updated main
-```bash
-git push origin main
-```
+## STEP 3 – Create GitHub Project
 
-### Step 19: Verify branches
-```bash
-git branch -a
-git log --oneline --graph --all
-```
+1. Open your GitHub account.
+2. Click your profile picture.
+3. Select Your projects.
+4. Click New project.
+5. Select Board.
+6. Enter the project name:
 
-## D. AUTOMATIC GIT COMMIT USING BASH
+`Server Monitoring Agile Project Board`
 
-### Step 20: Create a log file
-```bash
-echo "Automation started: $(date)" >> report.log
-```
+7. Click Create project.
 
-### Step 21: Create an automation script
-```bash
-nano auto_commit.sh
-```
+## STEP 4 – Configure Status Columns
 
-Enter:
-```bash
-#!/bin/bash
-set -e
+Configure the following four statuses:
 
-cd /home/sharon_christy_r/git_lab
+1. Backlog
+2. To Do
+3. In Progress
+4. Done
 
-git add report.log
+If the required statuses are unavailable:
 
-if git diff --cached --quiet; then
-    echo "No changes to commit"
-    exit 0
-fi
+1. Open the Status field dropdown.
+2. Select Edit field.
+3. Add the missing status options.
+4. Save the changes.
 
-git commit -m "Automated report update"
-git push origin main
+Your board must contain four columns:
 
-echo "Git automation completed successfully"
-```
+| Backlog | To Do | In Progress | Done |
+|---|---|---|---|
+| Future Tasks | Ready Tasks | Active Tasks | Completed Tasks |
 
-Use the correct project path and ensure you are working on main.
+---
 
-### Step 22: Give execution permission
-```bash
-chmod +x auto_commit.sh
-```
+# PART 3 – CREATE USER STORIES AND GITHUB ISSUES
 
-### Step 23: Generate a new log entry
-```bash
-echo "New automated execution: $(date)" >> report.log
-```
+## STEP 5 – Open the Repository
 
-### Step 24: Run automation
-```bash
-./auto_commit.sh
-```
+Open:
 
-Expected: Commit created and changes pushed to GitHub.
+`https://github.com/YOUR_USERNAME/server-monitoring-agile`
 
-## E. GIT HOOKS
+1. Click Issues.
+2. Click New issue.
 
-Git hooks automatically execute scripts during Git operations.
+If Issues is unavailable, open repository Settings and enable Issues under Features.
 
-- Pre-commit: Executes before a commit.
-- Post-commit: Executes after a successful commit.
+Create the following 10 Issues.
 
-### Step 25: Create pre-commit hook
-```bash
-nano .git/hooks/pre-commit
-```
+## STEP 6 – CREATE ISSUE 1: CPU MONITORING
 
-Enter:
-```bash
-#!/bin/bash
+**Title:**
 
-echo "Validating project files..."
+`Implement CPU Usage Monitoring`
 
-if [ -f project.sh ]; then
-    echo "Validation successful"
-    exit 0
-else
-    echo "Error: project.sh not found"
-    exit 1
-fi
-```
+**Description:**
 
-### Step 26: Give permission
-```bash
-chmod +x .git/hooks/pre-commit
-```
-
-### Step 27: Create post-commit hook
-```bash
-nano .git/hooks/post-commit
-```
-
-Enter:
-```bash
-#!/bin/bash
-
-echo "Commit completed successfully!"
-echo "Project changes saved in Git."
-```
-
-### Step 28: Give permission
-```bash
-chmod +x .git/hooks/post-commit
-```
-
-### Step 29: Test both hooks
-```bash
-echo "Git hook testing: $(date)" >> report.log
-git add report.log
-git commit -m "Test Git hooks"
-```
-
-Expected:
 ```text
-Validating project files...
-Validation successful
-Commit completed successfully!
-Project changes saved in Git.
-```
+USER STORY:
 
-## F. IMPORTANT VERIFICATION COMMANDS
+As a system administrator,
+I want to monitor CPU utilization,
+so that I can identify high CPU usage and prevent server performance problems.
 
-```bash
-git status
-git log --oneline
-git branch -a
-git remote -v
-git config --global --list
-```
+TASKS:
 
-## RESULT
+1. Collect CPU utilization information.
+2. Identify CPU usage percentage.
+3. Display CPU usage.
+4. Identify high CPU utilization.
+5. Verify CPU monitoring functionality.
 
-Thus, Git repository initialization, version tracking, automated commits, GitHub integration, branch management, and Git hooks were implemented and verified successfully.
+ACCEPTANCE CRITERIA:
+
+1. CPU utilization must be displayed as a percentage.
+2. High CPU usage must be identifiable.
+3. CPU information must be available to administrators.
+
+MODULE: CPU MONITORING
+PRIORITY: HIGH
